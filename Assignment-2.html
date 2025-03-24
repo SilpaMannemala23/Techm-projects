@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #121212;
+        }
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .left-section {
+            width: 25%;
+            background: #181818;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .right-section {
+            width: 75%;
+            padding-left: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+            scroll-behavior: smooth;
+        }
+        .artist, .album {
+            text-align: center;
+            min-width: 110px;
+        }
+        .artist img {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%; 
+            object-fit: cover;
+        }
+        .album img
+        {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, #a133ff, #ff3381);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                gap: 80px;
+            }
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .left-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .right-section {
+                width: 100%;
+                padding-left: 0;
+            }
+            .carousel {
+                justify-content: center;
+                overflow-x: scroll;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-nav {
+                padding: 10px;
+            }
+            .top-nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+            .artist img, .album img {
+                width: 80px;
+                height: 80px;
+                border-radius: 0;
+            }
+            .footer {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <div>
+            <a href="https://open.spotify.com/">Home</a>
+            <a href="https://open.spotify.com/search">Search</a>
+        </div>
+        <div>
+            <a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2Fsearch">Sign Up</a>
+            <a href="https://accounts.spotify.com/en-GB/login?creation_point=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3Db3d8556a78728c582220642be392e1e5%26device%3Ddesktop&continue=https%3A%2F%2Fopen.spotify.com%2Fsearch%3Fflow_ctx%3Db65f0741-1ec2-4c42-b053-6422e6cc8226%253A1740786471&flow_ctx=b65f0741-1ec2-4c42-b053-6422e6cc8226%3A1740786471">Log In</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="left-section">
+            <h2>Your Library</h2>
+            <p>Create your first playlist</p>
+            <button>Create Playlist</button>
+            <p>Find some podcasts to follow</p>
+            <button>Browse Podcasts</button>
+        </div>
+        
+        <div class="right-section">
+            <h2>Popular Artists</h2>
+            <div class="carousel    ">
+                <div class="artist"><a href="https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU"><img src="https://i.scdn.co/image/ab6761610000e5ebcb6926f44f620555ba444fca" alt="Pritam"></a><p>Pritam</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"><img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7" alt="Arijit Singh"></a><p>Arijit Singh</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG"><img src="https://songsall.com/wp-content/uploads/2024/08/Untitled-design-6.png" alt="A.R. Rahman"></a><p>A.R. Rahman</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/1mBydYMVBECdDmMfE2sEUO"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202501/sachin-and-jigar-172331928-1x1.jpg?VersionId=d6.fg1ZNmaaeUUTmF_XNhNdu4yUox0kx" alt="Sachin-Jigar"></a><p>Sachin-Jigar</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/6Mv8GjQa7LKUGCAqa9qqdb"><img src="https://i.scdn.co/image/ab6761610000e5eb90b6c3d093f9b02aad628eaf" alt="Vishal-Shekhar"></a><p>Vishal-Shekhar</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/2oSONSC9zQ4UonDKnLqksx"><img src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="Atif Aslam"></a><p>Atif Aslam</p></div>
+                <div class="artist"><a href="https://open.spotify.com/artist/4zCH9qm4R2DADamUHMCa6O"><img src="https://a10.gaanacdn.com/gn_img/artists/a7LWBaz3zX/7LWB0AOKzX/size_m_1716892617.jpg" alt="Anirudh Ravichander"></a><p>Anirudh Ravichander</p></div>
+            </div>
+            <h2>Popular Albums</h2>
+            <div class="carousel">
+                <div class="album"><a href="https://open.spotify.com/album/2yYfIOq25JQWvUQ9AR172D"><img src="https://images.radiocity.in/Radiocity-images/images/uploads/web-stories/wsstkc_ws.png" alt="Sanam Teri Kasam"></a><p>Sanam Teri Kasam</p></div>
+                <div class="album"><a href="https://open.spotify.com/album/0Rkv5iqjF2uenfL0OVB8hg"><img src="https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3" alt="Aashiqui 2"></a><p>Aashiqui 2</p></div>
+                <div class="album"><a href="https://open.spotify.com/album/2Lxoc72vRTGdQfMvj7Ovi1"><img src="https://www.prabhatkhabar.com/wp-content/uploads/2025/01/Yeh-Jawaani-Hai-Deewani-Re-Release-Box-Office-Collection-Day-1.jpg" alt="Yeh Jawaani Hai Deewani"></a><p>Yeh Jawaani Hai Deewani</p></div>
+                <div class="album"><a href="http://open.spotify.com/album/5KF4xCxDD8ip003hoatFT9"><img src="https://i.scdn.co/image/ab67616d0000b273aad3f4b601ae8763b3fc4e88" alt="Glory"></a><p>Glory</p></div>
+                <div class="album"><a href="https://open.spotify.com/album/7KIwUrSiA0gc9WlI7AYIfZ"><img src="https://i.scdn.co/image/ab67616d0000b2737f35adfbec3bb2bc8256802b" alt="Who (Remixes)"></a><p>Who (Remixes)</p></div>
+                <div class="album"><a href="http://open.spotify.com/album/75SlrAXlLbJN9LYJwlTJh6"><img src="https://images.thedirect.com/media/article_full/mismatched-cast.jpg" alt="Mismatched: Season 3"></a><p>Mismatched: Season 3</p></div>
+                <div class="album"><a href="https://open.spotify.com/album/7vpQCYM9kT9jhKa2MEzZSl"><img src="https://i.scdn.co/image/ab67616d0000b2736138560a7e7475706e900d3c" alt="Sicario"></a><p>Sicario</p></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+        <a href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2Fsearch"><button style="background-color:aquamarine;">Sign Up</button></a>
+    </div>
+</body>
+</html>
